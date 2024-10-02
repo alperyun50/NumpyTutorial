@@ -77,5 +77,46 @@ print(np.log10(a))
 
 a = np.array([1,2,3])
 a = np.append(a, [7,8,9])
+a = np.insert(a, 3, [4,5,6])
 
 print(a)
+
+
+a = np.array([[1,2,3], [4,5,6]])
+
+# a = np.delete(a, 1)
+
+a = np.delete(a, 0, 1)
+
+print(a)
+
+
+a = np.array([[1,2,3,4,5],
+              [6,7,8,9,10],
+              [11,12,13,14,15],
+              [16,17,18,19,20]])
+
+print(a.shape)
+print(a.reshape((5,4)))
+print(a.reshape((10,2)))
+
+print(a.resize((10,2)))
+
+print(a.flatten())
+print(a.ravel())
+
+var1 = a.flatten()
+var1[2] = 100
+print(var1)
+print(a)
+
+var1 = a.ravel()
+var1[2] = 100
+print(var1)
+print(a)
+
+
+var = [v for v in a.flat]
+print(var)
+
+
